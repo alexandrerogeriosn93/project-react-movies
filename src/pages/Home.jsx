@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const moviesURL = import.meta.env.VITE_API;
+const moviesUrl = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
 
 const Home = () => {
@@ -14,7 +14,7 @@ const Home = () => {
   };
 
   useEffect(() => {
-    const topRatedURL = `${moviesURL}top_rated?${apiKey}`;
+    const topRatedURL = `${moviesUrl}top_rated?${apiKey}`;
     getTopRatedMovies(topRatedURL);
   }, []);
 
